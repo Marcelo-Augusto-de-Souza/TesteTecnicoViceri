@@ -56,6 +56,6 @@ ng serve
 - De antemão agradeço a Viceri SEIDOR por me dar a oportunidade de participar do processo seletivo de Desenvolvedor Fullstack Trainee/Junior.
 
 ## Contato
-- Nome: Marcelo Augusto de Souza
+- Nome: Marcelo Augusto de Souza Rosa
 - Email: ademarjsantana49@gmail.com
 - LinkedIn: https://www.linkedin.com/in/marcelo-augusto-9182a021a/
