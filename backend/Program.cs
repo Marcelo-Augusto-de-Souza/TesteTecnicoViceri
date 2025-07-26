@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using backend.Data;
 using backend.SuperheroisRotas;
-
+//Lembre de colocar sua propria senha do Banco de Dados na variavel "Default" no arquivo appsettings.json
 
 var builder = WebApplication.CreateBuilder(args);
 
