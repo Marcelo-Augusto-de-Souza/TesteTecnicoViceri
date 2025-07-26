@@ -13,4 +13,5 @@ public class HeroiDTO
     public float Altura { get; set; }
 
     public float Peso { get; set; }
+    public List<string> Poderes { get; set; } = new List<string>();
 }

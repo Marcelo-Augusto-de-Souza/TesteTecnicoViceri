@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace backend.Models;
@@ -16,4 +16,6 @@ public partial class Heroi
     public float Altura { get; set; }
 
     public float Peso { get; set; }
+
+    public ICollection<HeroisSuperpoderes> HeroisSuperpoderes { get; set; } = new List<HeroisSuperpoderes>();
 }

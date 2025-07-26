@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using backend.Models;
@@ -35,13 +35,15 @@ public partial class ViceriTesteTecnicoContext : DbContext
 
         modelBuilder.Entity<HeroisSuperpoderes>(entity =>
         {
-            entity.HasNoKey();
+            entity.HasKey(e => new { e.HeroiId, e.SuperpoderId });
 
-            entity.HasOne(d => d.Heroi).WithMany()
+            entity.HasOne(d => d.Heroi)
+                .WithMany(h => h.HeroisSuperpoderes)
                 .HasForeignKey(d => d.HeroiId)
                 .HasConstraintName("FK_HeroiId");
 
-            entity.HasOne(d => d.Superpoder).WithMany()
+            entity.HasOne(d => d.Superpoder)
+                .WithMany()
                 .HasForeignKey(d => d.SuperpoderId)
                 .HasConstraintName("FK_SuperpoderId");
         });

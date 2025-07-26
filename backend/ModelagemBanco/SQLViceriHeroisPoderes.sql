@@ -21,11 +21,13 @@ CREATE TABLE Superpoderes (
 GO
 
 CREATE TABLE HeroisSuperpoderes (
-	HeroiId INT,
-	SuperpoderId INT,
-	CONSTRAINT FK_HeroiId FOREIGN KEY (HeroiId) REFERENCES Herois(Id),
-	CONSTRAINT FK_SuperpoderId FOREIGN KEY (SuperpoderID) REFERENCES Superpoderes(Id)
+    HeroiId INT,
+    SuperpoderId INT,
+    PRIMARY KEY (HeroiId, SuperpoderId),
+    CONSTRAINT FK_HeroiId FOREIGN KEY (HeroiId) REFERENCES Herois(Id),
+    CONSTRAINT FK_SuperpoderId FOREIGN KEY (SuperpoderId) REFERENCES Superpoderes(Id)
 );
+GO
 
 INSERT INTO Superpoderes (Superpoder, Descricao)
 VALUES
@@ -35,7 +37,3 @@ VALUES
 GO 
 
 SELECT * FROM Superpoderes
-
-SELECT * FROM Herois
-
-SELECT * FROM HeroisSuperpoderes

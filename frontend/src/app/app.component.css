@@ -1,0 +1,84 @@
+.browser-container {
+    width: 800px;
+    height: 600px;
+    margin: 50px auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .browser-header {
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .browser-buttons {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .nav-button {
+    padding: 8px 16px;
+    border: 1px solid #999;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 4px 4px 0 0;
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .nav-button.active {
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+    font-weight: bold;
+  }
+  
+  .screen-container {
+    height: calc(100% - 60px);
+    background-color: #fff;
+    overflow: auto;
+  }
+  
+  .screen {
+    padding: 30px;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  
+  .screen h2 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .screen p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .content-box {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 6px;
+    margin-top: 20px;
+  }
+  
+  .content-box h3 {
+    color: #444;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  .content-box p {
+    margin-bottom: 0;
+  }

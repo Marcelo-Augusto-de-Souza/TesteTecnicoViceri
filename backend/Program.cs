@@ -11,8 +11,17 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ViceriTesteTecnicoContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
-
+var MyCors = "_myCors";
+builder.Services.AddCors(o =>
+    o.AddPolicy(MyCors, p => p
+        .WithOrigins("http://localhost:4200")
+        .AllowAnyHeader()
+        .AllowAnyMethod()));
 var app = builder.Build();
+
+
+app.UseCors(MyCors);
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
